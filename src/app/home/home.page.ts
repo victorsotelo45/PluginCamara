@@ -6,7 +6,7 @@ import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  imageSource:any;
+  imageSource: any;
   constructor() {}
 
   takePicture = async () => {
@@ -14,9 +14,9 @@ export class HomePage {
       quality: 90,
       allowEditing: false,
       resultType: CameraResultType.DataUrl,
-      source: CameraSource.Prompt
+      source: CameraSource.Prompt,
     });
 
     this.imageSource = image.dataUrl;
-  }
+  };
 }
